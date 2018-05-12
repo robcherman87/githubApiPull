@@ -7,8 +7,9 @@ import axios from 'axios';
 import UserForm from './components/UserForm';
 
 class App extends Component {
-  state = {
-    repos: null
+  constructor() {
+    super();
+    this.state = { repos: null }
   }
   getUser = (e) => {
     e.preventDefault();
@@ -21,6 +22,8 @@ class App extends Component {
       })
     } else return;
   }
+
+  getLocation 
   render() {
     return (
       <div className="App">
@@ -30,6 +33,8 @@ class App extends Component {
         <UserForm getUser={this.getUser} />
         { this.state.repos ? <p> Number of repos: { this.state.repos }</p> :
         <p>Please enter a username.</p> } 
+        <div>
+        </div>
       </div>
     );
   }
